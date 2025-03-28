@@ -1,0 +1,59 @@
+---
+title: 10 practices to help build a great engineering culture (DRAFT)
+description: Work in progress
+date: "2025-03-28"
+---
+
+Engineering is about more than just coding. Here are 10 processes we follow or behaviours we encourage as a team to help us produce great work.
+
+## Accessibility (A11y) Swarms
+
+An A11y swarm is a process where multiple engineers and testers jump on a call and work together to fully test a front-end feature. Think disabling JavaScript, using voice control, using screen readers, navigating by keyboard alone… (the list goes on)
+
+This isn’t to say a swarm is any more important than the extensive work that goes into planning, designing, and creating an accessible feature. But the thing I really love about A11y swarms is that it gets engineers hands-on with Assistive Technologies. What’s more, we experience firsthand the challenges users face if a feature is inaccessible.
+
+One side effect of this is that, whilst our shiny new component may pass the swarm ✅, we’ll find an A11y bug somewhere on the live website 🐛. Like many things in software, it’s a continuous process.
+
+See this guide to learn more about how we handle Accessibility at the BBC, Accessibility, Your Team and You: https://bbc.github.io/accessibility-news-and-you/.
+
+## Threat Modelling
+
+Like A11y swarms, we take a collaborative approach to threat modelling. Threat modelling allows us to consider and identify security risks in our architecture.
+
+A core requirement for these sessions is an up-to-date architecture diagram. From this, we assign trust/ value ratios and complete a STRIDE analysis. (If you do not know what these terms mean, I highly recommend reading x)
+
+Much like A11y swarms, I think the shared collaborative aspect is key to helping us build a great engineering culture. We encourage different engineers to run each session. We have discussions that everyone can add to and learn from.
+
+I prepare for sessions by swotting up on my security principles ahead of a session (OWASP, x, x). This helps me to bolster my security knowledge and keep it up to date.
+
+We also champion the idea that it doesn’t need to be perfect. Having a stab at making (or updating) a Threat Model is better than not having one at all.
+
+## Retrospectives
+
+We are an Agile team, meaning we follow a determined set of processes. For example, we work in two-week sprints. We have a “daily-sync” call each morning to share our progress and discuss any blockers. We create tickets (which you can think of as briefs for pieces of work) that we break down into smaller tickets until we feel confident that they can be completed in two weeks or less.
+
+Whilst there are lots of things that I like about Agile ways of working. I feel one of the most beneficial processes are Retrospectives. Simply put, I have chats with friends where they mention things their team, manager, or company could be doing differently to make things better. And I always think, “This is EXACTLY the type of thing you would bring to a retrospective”. (This might sound clichéd, but sadly it’s true).
+
+In our Retrospectives, we reflect on what went well over the past two weeks, and what could have gone better. We identify actions we will take to make sure mistakes don’t happen again, or things that work well continue to do so.
+
+To have effective Retrospectives, a team needs to have a commitment to good psychological safety. This may take time and work to build. But the rewards it reaps includes helping to build a great engineering culture.
+
+## Tech/Security/Dependency Workflows
+
+As engineers, we have an agreement with our Product Manager that we can bring in at least one piece of Tech, Security, or Dependency work each sprint.
+
+This helps us keep on top of tech debt (like the name suggests, if not periodically chipped away, it snowballs and makes your life as an engineer more difficult).
+
+The key aspect of this practice that really helps us build a great engineering culture is the incremental approach. (Link to other blog – software being organic?)
+
+This stream of work is also largely managed by engineers, meaning we can create tickets (write briefs) for pieces of work we think would be helpful. Then we can prioritise accordingly. This provides agency and the opportunity to think holistically (as a senior dev might do) to identify ways to improve our codebase.
+
+## Automated Testing
+
+It goes without saying that having automated testing makes life a lot easier. Not only do you know your freshly typed code works, but you can also be pretty sure that it hasn’t broken anything else!
+
+We predominantly use unit tests, integration tests, and end-to-end (e2e) tests to check our code. We use Chromatic UI and Storybook to check front-end changes. These (plus some further checks) run on every Pull Request via GitHub Actions. We then run e2e tests on our CI/CD pipeline, once on deployment and at routine times throughout the day.
+
+Of course, things can slip through the cracks of tests, so it’s important to complement automated testing with peer reviews, test support, etc. But they are a great safety net. They help engineers to fail fast and succeed faster.
+
+...To be completed...
